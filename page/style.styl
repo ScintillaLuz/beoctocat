@@ -6,3 +6,40 @@
 @import url("//fonts.googleapis.com/css?family=Open\+Sans:400,300,600,700,800")
 @import url("//fonts.googleapis.com/css?family=Inconsolata:400,700")
 
+// Colors
+$color_link = #5A75D7
+
+
+
+body
+    font-family "Open Sans", Helvetica, sans-serif
+    text-rendering optimizeLegibility
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale
+
+    a
+        color $color_link
+        border-bottom 1px solid @color
+
+        text-decoration none
+
+        transition(all 0.3s ease)
+
+        &:hover
+            color shade($color_link, 15%)
+            border-bottom 1px solid @color
+
+bg-gradient()
+    background: #f5f6e0; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f5f6e0 0%, #5d77d7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f6e0), color-stop(100%,#5d77d7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #f5f6e0 0%,#5d77d7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #f5f6e0 0%,#5d77d7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #f5f6e0 0%,#5d77d7 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #f5f6e0 0%,#5d77d7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6e0', endColorstr='#5d77d7',GradientType=0 ); /* IE6-9 */
+
+// Page Styles
+
+.octocat-banner
+    background bg-gradient
