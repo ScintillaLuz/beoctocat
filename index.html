@@ -8,12 +8,13 @@
 
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/waffle.css" type="text/css">
+    <link rel="stylesheet" href="octicons/octicons.css">
 </head>
 <body>
 
     <div class="row no-wrap center octocat-banner">
         <div class="unit">
-            <img src="img/octocat.svg" alt="">
+            <span class="octicon octicon-octoface">
         </div>
         <div class="unit">
             <h1>Hello, I’m Valentina</h1>
@@ -23,7 +24,7 @@
             <li><a href="#why-github" class="button">Why Github?</a></li>
             <li><a href="#hire-me" class="button">Reasons to hire me</a></li>
             <li><a href="#projects" class="button">My Work</a></li>
-            <li><a href="" class="button">Resumé</a></li>
+            <li><a href="#resume" class="button">Resumé</a></li>
             <li><a href="#contacts" class="button">Contacts</a></li>
         </ul>
     </div>
@@ -99,29 +100,39 @@
             <h3  id="projects" class="section-title">6 Projects I'm proud of</h3>
         </div>
         <div class="unit nested">
-            <div class="row split3">
+            <div class="row split3 one-column-phones">
                 <div class="unit project">
-                    <div class="img-container"><img src="" alt=""></div>
-                    <p>What happens when you want to learn HTML/CSS and Stylus the hard way? What can you do when you're building webapps and tweaking an existing framework seems a counterproductive job? My solution was to build Waffle, the first cannibal (and lightweight) CSS framework based on inline-block. Demo Page and Speakerdeck presentation.</p>
+                    <div class="img-container">
+                        <img src="img/waffle.svg">
+                    </div>
+                    <p>What happens when you want to learn HTML/CSS and Stylus the hard way? What can you do when you're building webapps and tweaking an existing framework seems a counterproductive job? If you are me, you'll probably decide to <strong>build your own CSS framework</strong>. This is why I build <strong>Waffle</strong>, the first cannibal (and lightweight) <strong>responsive CSS framework based on inline-block</strong>. No clearing floats, no scary combinations of classes. Compiled in Stylus, Waffle is open source and released under MIT Licence.</p>
                     <a href=""></a>
                 </div>
                 <div class="unit project">
-                    <div class="img-container"><img src="" alt=""></div>
+                    <div class="img-container">
+                        <img src="img/isoverse.svg">
+                    </div>
                     <p>The most painful moment in a designer's life is the moment you have to build your online portfolio. Every tool seems unsatisfactory, not fitting your typical workflow. Toying with the idea of hosting a website using Dropbox, me and Vrde decided to spend our spare time developing Isoverse, a publishing platform for visual artists. Working as a Dropbox app, Isoverse makes it possible to directly publishing a website from your computer, working solely with the tools you already know. For Isoverse I worked on visual identity, visual strategy and concept design; UI and guidelines, UX and user flows, HTML (with Django templates) and CSS (vanilla and Stylus), creating both the static site and the portfolio templates we offer. Isoverse is now running on the latest version of Waffle; I've been porting various parts of it from an old version–a valuable experience in reading and rewriting your old code.</p>
                     <a href="https://isoverse.us" target="_blank">view Isoverse</a>
                 </div>
                 <div class="unit project">
-                    <div class="img-container"><img src="" alt=""></div>
+                    <div class="img-container">
+                        <img src="img/devcharm.svg">
+                    </div>
                     <p>When with my co-founder we decided to pivot from a social bookmarking platform, we analyzed the data we had on users and content and we realized we indeed attracted mostly programmers. The result is <strong>Devcharm</strong>, a collaborative and open library about programming and development. Even though it fell short on attracting UG content, I worked passionately building the <strong>HTML</strong> using <strong>Django templates</strong>, <strong>UI</strong> elements, guidelines and styles with <strong>Stylus</strong>, along with <strong>interactions and UX</strong>. Devcharm is build upon an early version of Waffle.</p>
                     <a href="https://devcharm.com/" target="_blank">view Devcharm</a>
                 </div>
                 <div class="unit project">
-                    <div class="img-container"><img src="" alt=""></div>
+                    <div class="img-container">
+                        <img src="img/manana.svg">
+                    </div>
                     <p>When I heard a Mozilla Evangelist presenting the Firefox Phone I was suddenly fascinated by the idea of a totally open mobile OS, entirely based on HTML5 and Javascript. I proposed my collaborators to develop a <strong>simple utility app</strong>, for saving and reading links offline–saving bandwith is essential for these entry phones marketed primarily in the developing countries–and in a few days we produced <strong><a href="http://getmanana.tumblr.com/" target="_blank">Manana</a></strong>. Here I focused entirely on interactions, users flow and UX, UI and icon design.</p>
                     <a href="https://marketplace.firefox.com/app/manana" target="_blank">Get Manana on the Firefox Marketplace</a>
                 </div>
                 <div class="unit project">
-                    <div class="img-container"><img src="" alt=""></div>
+                    <div class="img-container">
+                        <img src="" alt="">
+                    </div>
                     <p>I still consider myself a typographer, an expert of typography in the context of its use. My MA at the Department of Typography at Reading focused on Book Design, but my research included topics of cognitive psychology and accessibility. Neverthless, one of my favourite projects was designing a series of book covers, in my case I picked a rebranding of sci-fi to elevate the visual approach of the genre; I was very happy when Heyne decided to publish a series of modern and contemporary sci-fi classics using my watercolor illustrations. They changed the typography, but I am still enormously proud to see my design on Neuromancer.</p>
                 </div>
             </div>
@@ -131,23 +142,226 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row my-resume">
         <div class="unit">
-            <h3 id="hire-me" class="section-title">7 Reasons to hire me</h3>
+            <h3 id="resume" class="section-title">Resumé</h3>
         </div>
-    </div>
 
-    <div class="row">
-        <ul class="unit reset-list nested">
-            <li>
+        <div class="unit nested resume-content">
 
-            </li>
+            <div class="row resume-unit">
+                <div class="unit u-25 experience-type">
+                    <ul class="reset-list experience-details">
+                        <li><span class="octicon octicon-squirrel"></span></li>
+                        <li class="what">Co-founder, Design &amp; Frontend</li>
+                        <li class="when">2011/2014</li>
+                        <li class="where">Urlist, Berlin–Germany</li>
+                    </ul>
+                </div>
+                <div class="unit u-75 nested">
+                    <div class="row">
+                        <div class="unit u-50 experience-content">
+                            <h5>What I did</h5>
+                            <p></p>
+                        </div>
+                        <div class="unit u-50 experience-learned">
+                            <h5>What I learned</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row resume-unit">
+                <div class="unit u-25 experience-type">
+                    <ul class="reset-list experience-details">
+                        <li><span class="octicon octicon-paintcan"></span></li>
+                        <li class="what">Sr Graphic Designer</li>
+                        <li class="when">2010/2012</li>
+                        <li class="where">ZERO Publishing, Milan–Italy</li>
+                    </ul>
+                </div>
+                <div class="unit u-75 nested">
+                    <div class="row">
+                        <div class="unit u-50 experience-content">
+                            <h5>What I did</h5>
+                            <p></p>
+                        </div>
+                        <div class="unit u-50 experience-learned">
+                            <h5>What I learned</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row resume-unit">
+                <div class="unit u-25 experience-type">
+                    <ul class="reset-list experience-details">
+                        <li><span class="octicon octicon-mortar-board"></span></li>
+                        <li class="what">MA Book Design & Typography</li>
+                        <li class="when">2009/2010</li>
+                        <li class="where">University of Reading, England</li>
+                    </ul>
+                </div>
+                <div class="unit u-75 nested">
+                    <div class="row">
+                        <div class="unit u-50 experience-content">
+                            <h5>What I did</h5>
+                            <p></p>
+                        </div>
+                        <div class="unit u-50 experience-learned">
+                            <h5>What I learned</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row resume-unit">
+                <div class="unit u-25 experience-type">
+                    <ul class="reset-list experience-details">
+                        <li><span class="octicon octicon-paintcan"></span></li>
+                        <li class="what">Sr Graphic Designer Freelance</li>
+                        <li class="when">2007/2011</li>
+                        <li class="where">Italy</li>
+                    </ul>
+                </div>
+                <div class="unit u-75 nested">
+                    <div class="row">
+                        <div class="unit u-50 experience-content">
+                            <h5>What I did</h5>
+                            <p></p>
+                        </div>
+                        <div class="unit u-50 experience-learned">
+                            <h5>What I learned</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row resume-unit">
+                <div class="unit u-25 experience-type">
+                    <ul class="reset-list experience-details">
+                        <li><span class="octicon octicon-podium"></span></li>
+                        <li class="what">Assistant Professor</li>
+                        <li class="when">2008/2009</li>
+                        <li class="where">Politecnico, Milan–Italy</li>
+                    </ul>
+                </div>
+                <div class="unit u-75 nested">
+                    <div class="row">
+                        <div class="unit u-50 experience-content">
+                            <h5>What I did</h5>
+                            <p></p>
+                        </div>
+                        <div class="unit u-50 experience-learned">
+                            <h5>What I learned</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row resume-unit">
+                <div class="unit u-25 experience-type">
+                    <ul class="reset-list experience-details">
+                        <li><span class="octicon octicon-paintcan"></span></li>
+                        <li class="what">Jr Graphic Designer</li>
+                        <li class="when">2004/2007</li>
+                        <li class="where">Milan–Italy</li>
+                    </ul>
+                </div>
+                <div class="unit u-75 nested">
+                    <div class="row">
+                        <div class="unit u-50 experience-content">
+                            <h5>What I did</h5>
+                            <p></p>
+                        </div>
+                        <div class="unit u-50 experience-learned">
+                            <h5>What I learned</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row resume-unit">
+                <div class="unit u-25 experience-type">
+                    <ul class="reset-list experience-details">
+                        <li><span class="octicon octicon-mortar-board"></span></li>
+                        <li class="what">MA Graphic Design</li>
+                        <li class="when">2004/2007</li>
+                        <li class="where">Politecnico, Milan–Italy</li>
+                    </ul>
+                </div>
+                <div class="unit u-75 nested">
+                    <div class="row">
+                        <div class="unit u-50 experience-content">
+                            <h5>What I did</h5>
+                            <p></p>
+                        </div>
+                        <div class="unit u-50 experience-learned">
+                            <h5>What I learned</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row resume-unit">
+                <div class="unit u-25 experience-type">
+                    <ul class="reset-list experience-details">
+                        <li><span class="octicon octicon-repo"></span></li>
+                        <li class="what">BA in Product Design</li>
+                        <li class="when">2001/2004</li>
+                        <li class="where">Politecnico, Milan–Italy</li>
+                    </ul>
+                </div>
+                <div class="unit u-75 nested">
+                    <div class="row">
+                        <div class="unit u-50 experience-content">
+                            <h5>What I did</h5>
+                            <p></p>
+                        </div>
+                        <div class="unit u-50 experience-learned">
+                            <h5>What I learned</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row resume-unit">
+                <div class="unit u-25 experience-type">
+                    <ul class="reset-list experience-details">
+                        <li><span class="octicon octicon-repo"></span></li>
+                        <li class="what">Art High School</li>
+                        <li class="when">1995/2000</li>
+                        <li class="where">Varese–Italy</li>
+                    </ul>
+                </div>
+                <div class="unit u-75 nested">
+                    <div class="row">
+                        <div class="unit u-50 experience-content">
+                            <h5>What I did</h5>
+                            <p></p>
+                        </div>
+                        <div class="unit u-50 experience-learned">
+                            <h5>What I learned</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="row center contacts">
         <div class="unit">
-            <h3 id="contacts" class="section-title">Thanks.</h3>
-            <p><a href="mailto:poferopuffo@gmail.com">poferopuffo@gmail.com</a> </br>+49 151 25116127</p>
+            <h3 id="contacts" class="section-title">Thanks</h3>
+            <p><a href="mailto:poferopuffo@gmail.com">poferopuffo@gmail.com</a> </br><a href="tel:+49-151-25116127">+49 151 25116127</a> </br>Nogatsraße 40, Berlin</p>
         </div>
     </div>
 

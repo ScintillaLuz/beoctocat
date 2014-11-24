@@ -8,8 +8,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 body a {
-  color: #5a75d7;
-  border-bottom: 1px solid #5a75d7;
+  color: #5d77d7;
+  border-bottom: 1px solid #5d77d7;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -56,19 +56,26 @@ strong {
   background: #f5f6e0;
 /* Old browsers */
   background: -moz-linear-gradient(top, #f5f6e0 0%, #5d77d7 100%);
+/* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f6e0), color-stop(100%, #5d77d7));
+/* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #f5f6e0 0%, #5d77d7 100%);
+/* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(top, #f5f6e0 0%, #5d77d7 100%);
+/* Opera 11.10+ */
   background: -ms-linear-gradient(top, #f5f6e0 0%, #5d77d7 100%);
+/* IE10+ */
   background: linear-gradient(to bottom, #f5f6e0 0%, #5d77d7 100%);
+/* W3C */
 }
-.octocat-banner img {
-  margin: 5em 0 0 0;
-  max-width: 100%;
-  opacity: 0.1;
+.octocat-banner .octicon-octoface {
+  margin: 0.2em 0 0 0;
+  color: #424d71;
+  font-size: 15em;
+  opacity: 0.2;
 }
 .octocat-banner h1 {
-  margin: 0.3em 0 0 0;
+  margin: 0.2em 0 0 0;
   font-size: 4.5em;
   font-weight: 800;
 }
@@ -145,6 +152,9 @@ strong {
   line-height: 2.4em;
   text-align: center;
 }
+.projects .img-container {
+  text-align: center;
+}
 .projects .section-title {
   padding-bottom: 0.8em;
   border-bottom: 1px solid #e2e2e2;
@@ -162,6 +172,44 @@ strong {
 }
 .projects .portfolio-links {
   text-align: center;
+}
+.my-resume .section-title {
+  padding-bottom: 0.8em;
+  border-bottom: 1px solid #e2e2e2;
+}
+.my-resume .resume-unit {
+  border-top: 3px solid #fff;
+}
+.my-resume .resume-unit h5 {
+  margin: 0 0 1em 0;
+  font-size: 1em;
+}
+.my-resume .resume-unit .experience-type,
+.my-resume .resume-unit .experience-content,
+.my-resume .resume-unit .experience-learned {
+  padding: 1em 2em;
+}
+.my-resume .resume-unit .experience-type {
+  background-color: #323232;
+}
+.my-resume .resume-unit .experience-type .octicon {
+  font-size: 3em;
+  color: #5b5b5b;
+}
+.my-resume .resume-unit .experience-type li {
+  color: #f7f7f6;
+  font-size: 0.85em;
+  line-height: 1.8em;
+  font-weight: 600;
+}
+.my-resume .resume-unit .experience-type .where {
+  color: #7a7a7a;
+}
+.my-resume .resume-unit .experience-content {
+  background-color: #f7f7f6;
+}
+.my-resume .resume-unit .experience-learned {
+  background-color: #e1e7f0;
 }
 .contacts .section-title {
   margin: 3em 0 0 0;

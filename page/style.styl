@@ -9,14 +9,16 @@
 // Colors
 $color_main = #3E3D3D
 $color_text = #515151
-$color_link = #5A75D7
+$color_link = #5D77D7
 $color_link_hover = #A48F2F
-$color_terminal = #323232
 $color_button = #CAD2EE
 $color_border_button = #97A8DA
 $color_shadow_button = #3D4F92
 $color_light_grey = #E2E2E2
-$color_bg_banner = #F7F7F6
+$color_bg_terminal = #323232
+$color_bg_grey = #F7F7F6
+$color_bg_lilac = #E1E7F0
+$color_dark_lilac = #424D71
 
 // Rounded Corners
 $rounded_corners = 4px
@@ -103,13 +105,14 @@ strong
     background linear-gradient(to bottom, #f5f6e0 0%,#5d77d7 100%) /* W3C */
     // filter progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6e0', endColorstr='#5d77d7',GradientType=0 ) /* IE6-9 */
 
-    img
-        margin 5em 0 0 0
-        max-width 100%
-        opacity 0.1
+    .octicon-octoface
+        margin 0.2em 0 0 0
+        color $color_dark_lilac
+        font-size 15em
+        opacity 0.2
 
     h1
-        margin 0.3em 0 0 0
+        margin 0.2em 0 0 0
         font-size 4.5em
         font-weight 800
 
@@ -155,7 +158,7 @@ strong
 // Hire me
 
 .reasons-to-hire-me
-    background-color $color_bg_banner
+    background-color $color_bg_grey
 
     .seven-reasons
         counter-reset li
@@ -204,6 +207,9 @@ strong
 // Projects
 .projects
 
+    .img-container
+        text-align center
+
     .section-title
         padding-bottom 0.8em
         border-bottom 1px solid $color_light_grey
@@ -221,6 +227,49 @@ strong
 
     .portfolio-links
         text-align center
+
+// Resume
+
+.my-resume
+    .section-title
+        padding-bottom 0.8em
+        border-bottom 1px solid $color_light_grey
+
+    .resume-unit
+        border-top 3px solid white
+
+        h5
+            margin 0 0 1em 0
+            font-size 1em
+
+        .experience-type
+        .experience-content
+        .experience-learned
+            padding 1em 2em
+
+        .experience-type
+            background-color $color_bg_terminal
+
+            .octicon
+                font-size 3em
+                color lighten($color_bg_terminal, 20%)
+
+            li
+                color $color_bg_grey
+
+                font-size 0.85em
+                line-height 1.8em
+                font-weight 600
+
+            .where
+                color lighten($color_bg_terminal, 35%)
+
+        .experience-content
+            background-color $color_bg_grey
+
+        .experience-learned
+            background-color $color_bg_lilac
+
 
 
 // Thanks & Contacts
@@ -244,7 +293,7 @@ strong
 // Git Joke
 
 .git-joke
-    background-color $color_terminal
+    background-color $color_bg_terminal
 
     p
         font-size 1.2em
