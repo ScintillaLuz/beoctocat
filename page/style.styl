@@ -7,12 +7,31 @@
 @import url("//fonts.googleapis.com/css?family=Inconsolata:400,700")
 
 // Colors
+$color_main = #3E3D3D
+$color_text = #515151
 $color_link = #5A75D7
+$color_link_hover = #A48F2F
+$color_terminal = #323232
+$color_button = #CAD2EE
+$color_border_button = #97A8DA
+$color_shadow_button = #3D4F92
+$color_light_grey = #E2E2E2
+$color_bg_banner = #F7F7F6
 
+// Rounded Corners
+$rounded_corners = 4px
 
+// Mixins
+transition()
+    -webkit-transition arguments
+    transition arguments
+
+// General Styles
 
 body
-    font-family "Open Sans", Helvetica, sans-serif
+    color $color_main
+
+    font-family 'Open Sans', Helvetica, sans-serif
     text-rendering optimizeLegibility
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale
@@ -26,20 +45,208 @@ body
         transition(all 0.3s ease)
 
         &:hover
-            color shade($color_link, 15%)
+            color $color_link_hover
             border-bottom 1px solid @color
 
-bg-gradient()
-    background: #f5f6e0; /* Old browsers */
-    background: -moz-linear-gradient(top,  #f5f6e0 0%, #5d77d7 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f6e0), color-stop(100%,#5d77d7)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #f5f6e0 0%,#5d77d7 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #f5f6e0 0%,#5d77d7 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #f5f6e0 0%,#5d77d7 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #f5f6e0 0%,#5d77d7 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6e0', endColorstr='#5d77d7',GradientType=0 ); /* IE6-9 */
+code
+    font-family 'Inconsolata', monospaced
+
+strong
+    font-weight 700
+
+// Buttons
+.button
+    padding 0.8em 1em
+
+    border-radius $rounded_corners
+    border 1px solid $color_border_button
+
+    background-color transparent
+    color $color_button
+
+    font-size 0.8em
+    font-weight 600
+    text-transform uppercase
+    letter-spacing 0.05em
+
+    transition(all 0.3s ease)
+
+    &:hover
+        box-shadow 0px 4px 4px -4px rgba($color_shadow_button, 0.5)
+        border 1px solid lighten($color_border_button, 15%)
+
+        color white
+        background-color rgba($color_border_button, 0.5)
+
+    &:active
+        box-shadow inset 0px 0px 3px 2px rgba($color_shadow_button, 0.2)
+
 
 // Page Styles
 
+// General Rules
+.section-title
+    font-size 2em
+    font-weight 300
+    text-align center
+    text-transform uppercase
+
+// Banner intro
+
 .octocat-banner
-    background bg-gradient
+    background #f5f6e0; /* Old browsers */
+    background -moz-linear-gradient(top, #f5f6e0 0%, #5d77d7 100%) /* FF3.6+ */
+    background -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f6e0), color-stop(100%,#5d77d7)) /* Chrome,Safari4+ */
+    background -webkit-linear-gradient(top, #f5f6e0 0%,#5d77d7 100%) /* Chrome10+,Safari5.1+ */
+    background -o-linear-gradient(top, #f5f6e0 0%,#5d77d7 100%) /* Opera 11.10+ */
+    background -ms-linear-gradient(top, #f5f6e0 0%,#5d77d7 100%) /* IE10+ */
+    background linear-gradient(to bottom, #f5f6e0 0%,#5d77d7 100%) /* W3C */
+    // filter progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6e0', endColorstr='#5d77d7',GradientType=0 ) /* IE6-9 */
+
+    img
+        margin 5em 0 0 0
+        max-width 100%
+        opacity 0.1
+
+    h1
+        margin 0.3em 0 0 0
+        font-size 4.5em
+        font-weight 800
+
+    h2
+        margin 0.3em 0 0 0
+        font-size 2em
+        font-weight 300
+
+        del
+            text-decoration line-through
+
+    .page-menu
+        margin 2em 0 2em 0
+
+// Intro
+
+.intro
+    color $color_text
+
+    font-size 1.2em
+    line-height 1.65em
+
+// Love Github
+
+.love-github
+    .section-title
+        margin 1.5em 0 0 0
+        padding-bottom 0.8em
+        border-bottom 1px solid $color_light_grey
+
+    .reason-why
+        padding 0 1em
+
+        h4
+            font-size 1.1em
+            font-weight 700
+
+        p
+            color $color_text
+            font-size 0.95em
+            line-height 1.6em
+
+// Hire me
+
+.reasons-to-hire-me
+    background-color $color_bg_banner
+
+    .seven-reasons
+        counter-reset li
+
+        h4
+        p
+            color $color_text
+
+        h4
+            margin 0.5em 0 0 0
+            font-size 1.2em
+            font-weight 700
+
+        p
+            margin 0.85em 0 2em 0
+            font-size 1.1em
+            line-height 1.7em
+
+        li
+            margin-left 4em
+            position relative
+
+            &::before
+                content counter(li)
+                counter-increment (li)
+
+                position absolute
+
+                margin-left -4em
+
+                background-color white
+                border 1px solid shade($color_light_grey, 1%)
+
+                width 2.5em
+                height 2.5em
+                border-radius 50%
+
+                color lighten($color_text, 12%)
+
+                font-size 1.6em
+                font-weight 300
+                line-height 2.4em
+                text-align center
+
+
+// Projects
+.projects
+
+    .section-title
+        padding-bottom 0.8em
+        border-bottom 1px solid $color_light_grey
+
+    .project
+        padding 0 1em
+
+        p
+            color $color_text
+            font-size 0.95em
+            line-height 1.6em
+
+        .img-container
+            background-color lighten($color_border_button, 65%)
+
+    .portfolio-links
+        text-align center
+
+
+// Thanks & Contacts
+
+.contacts
+
+    .section-title
+        margin 3em 0 0 0
+
+    p
+    a
+        font-weight 400
+
+    p
+        margin 0.5em 0 3em 0
+        color darken($color_light_grey, 35%)
+
+        line-height 1.8em
+
+
+// Git Joke
+
+.git-joke
+    background-color $color_terminal
+
+    p
+        font-size 1.2em
+        padding 8em 0
+        color white
