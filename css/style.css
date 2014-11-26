@@ -8,15 +8,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 body a {
-  color: #5d77d7;
-  border-bottom: 1px solid #5d77d7;
+  color: #515151;
+  background-color: #e1e7f0;
+  border-bottom: 1px solid #a3b5d1;
+  padding: 1px 2px;
+  font-weight: 600;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 body a:hover {
-  color: #a48f2f;
-  border-bottom: 1px solid #a48f2f;
+  background-color: #f4f4d4;
+  border-bottom: 1px solid #d8d867;
 }
 code {
   font-family: 'Inconsolata', monospaced;
@@ -92,17 +95,11 @@ strong {
   background: #f5f6e0;
 /* Old browsers */
   background: -moz-linear-gradient(top, #f5f6e0 0%, #5d77d7 100%);
-/* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f6e0), color-stop(100%, #5d77d7));
-/* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #f5f6e0 0%, #5d77d7 100%);
-/* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(top, #f5f6e0 0%, #5d77d7 100%);
-/* Opera 11.10+ */
   background: -ms-linear-gradient(top, #f5f6e0 0%, #5d77d7 100%);
-/* IE10+ */
   background: linear-gradient(to bottom, #f5f6e0 0%, #5d77d7 100%);
-/* W3C */
 }
 .octocat-banner .octicon-octoface {
   margin: 0.2em 0 0 0;
@@ -156,7 +153,7 @@ strong {
 }
 .intro {
   color: #515151;
-  font-size: 1.2em;
+  font-size: 1.15em;
   line-height: 1.65em;
 }
 @media screen and (max-width: 640px) {
@@ -231,7 +228,7 @@ strong {
   color: #666;
   font-size: 1.6em;
   font-weight: 300;
-  line-height: 2.4em;
+  line-height: 2.6em;
   text-align: center;
 }
 @media screen and (max-width: 640px) {
@@ -257,6 +254,7 @@ strong {
   padding: 0 1em;
 }
 .projects .project .img-container {
+  padding: 0.8em 0;
   background-color: #dbe1f2;
 }
 .projects .project .img-container img {
@@ -273,7 +271,8 @@ strong {
   margin: 1em 0 1.5em 0;
 }
 .projects .portfolio-links {
-  padding: 0.8em 0;
+  font-size: 0.9em;
+  padding: 1.4em 0;
   border-top: 1px solid #e2e2e2;
   border-bottom: 1px solid #e2e2e2;
   text-align: center;
@@ -383,7 +382,7 @@ strong {
 .contacts p {
   margin: 0.5em 0 3em 0;
   color: #939393;
-  line-height: 1.8em;
+  line-height: 2em;
 }
 .git-joke {
   background-color: #323232;

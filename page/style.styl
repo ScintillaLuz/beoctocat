@@ -9,8 +9,7 @@
 // Colors
 $color_main = #3E3D3D
 $color_text = #515151
-$color_link = #5D77D7
-$color_link_hover = #A48F2F
+$color_bg_link_hover = #F4F4D4
 $color_button = #CAD2EE
 $color_border_button = #97A8DA
 $color_shadow_button = #3D4F92
@@ -44,16 +43,20 @@ body
     -moz-osx-font-smoothing grayscale
 
     a
-        color $color_link
-        border-bottom 1px solid @color
+        color $color_text
+        background-color $color_bg_lilac
+        border-bottom 1px solid darken($color_bg_lilac, 20%)
 
+        padding 1px 2px
+
+        font-weight 600
         text-decoration none
 
         transition(all 0.3s ease)
 
         &:hover
-            color $color_link_hover
-            border-bottom 1px solid @color
+            background-color $color_bg_link_hover
+            border-bottom 1px solid darken($color_bg_link_hover, 30%)
 
 code
     font-family 'Inconsolata', monospaced
@@ -184,7 +187,7 @@ strong
 
     color $color_text
 
-    font-size 1.2em
+    font-size 1.15em
     line-height 1.65em
 
     @media screen and (max-width: 640px)
@@ -264,7 +267,7 @@ strong
 
                 font-size 1.6em
                 font-weight 300
-                line-height 2.4em
+                line-height 2.6em
                 text-align center
 
                 @media screen and (max-width: 640px)
@@ -289,6 +292,7 @@ strong
         padding 0 1em
 
         .img-container
+            padding 0.8em 0
             background-color lighten($color_border_button, 65%)
 
             img
@@ -305,9 +309,12 @@ strong
             margin 1em 0 1.5em 0
 
     .portfolio-links
-        padding 0.8em 0
+        font-size 0.9em
+        padding 1.4em 0
+
         border-top 1px solid $color_light_grey
         border-bottom 1px solid $color_light_grey
+
         text-align center
 
         @media screen and (max-width: 640px)
@@ -428,7 +435,7 @@ strong
         margin 0.5em 0 3em 0
         color darken($color_light_grey, 35%)
 
-        line-height 1.8em
+        line-height 2em
 
 
 // Git Joke
