@@ -19,9 +19,14 @@ $color_bg_terminal = #323232
 $color_bg_grey = #F7F7F6
 $color_bg_lilac = #E1E7F0
 $color_dark_lilac = #424D71
+$color_blue_lilac = #5D77D7
+$color_terminal_01 = #A0C0FF
+$color_terminal_02 = #FFF8C9
+$color_terminal_03 = #E7AAFF
 
 // Rounded Corners
 $rounded_corners = 4px
+$rounded_corners_small = 2px
 
 // Mixins
 transition()
@@ -68,6 +73,7 @@ strong
 
     font-size 0.8em
     font-weight 600
+    text-align center
     text-transform uppercase
     letter-spacing 0.05em
 
@@ -83,6 +89,29 @@ strong
     &:active
         box-shadow inset 0px 0px 3px 2px rgba($color_shadow_button, 0.2)
 
+    @media screen and (max-width: 640px)
+        display block
+
+        border 1px solid lighten($color_border_button, 15%)
+
+
+.btn-dark
+    @extend .button
+    display block
+    border 1px solid lighten($color_blue_lilac, 50%)
+
+    background-color lighten($color_blue_lilac, 50%)
+    color $color_text
+
+    &:hover
+        background-color lighten($color_blue_lilac, 65%)
+        color desaturate($color_text, 12%)
+
+.btn-small
+    @extend .button
+    padding 0.6em 0.8em
+
+    border-radius $rounded_corners_small
 
 // Page Styles
 
@@ -92,6 +121,9 @@ strong
     font-weight 300
     text-align center
     text-transform uppercase
+
+    @media screen and (max-width: 640px)
+        font-size 1.4em
 
 // Banner intro
 
@@ -111,10 +143,17 @@ strong
         font-size 15em
         opacity 0.2
 
+        @media screen and (max-width: 640px)
+            font-size 12em
+
     h1
         margin 0.2em 0 0 0
         font-size 4.5em
         font-weight 800
+
+        @media screen and (max-width: 640px)
+            padding 0 0.5em
+            font-size 1.8em
 
     h2
         margin 0.3em 0 0 0
@@ -124,16 +163,33 @@ strong
         del
             text-decoration line-through
 
+        @media screen and (max-width: 640px)
+            padding 0 0.5em
+            font-size 1.4em
+
     .page-menu
         margin 2em 0 2em 0
+
+        li
+            @media screen and (max-width: 640px)
+                display block
+                margin 0.5em 0
+
+        @media screen and (max-width: 640px)
+            margin 2em 0 0.5em 0
 
 // Intro
 
 .intro
+
     color $color_text
 
     font-size 1.2em
     line-height 1.65em
+
+    @media screen and (max-width: 640px)
+        padding 0 1em
+        font-size 1em
 
 // Love Github
 
@@ -155,7 +211,7 @@ strong
             font-size 0.95em
             line-height 1.6em
 
-// Hire me
+// Reasons to Hire me
 
 .reasons-to-hire-me
     background-color $color_bg_grey
@@ -172,10 +228,18 @@ strong
             font-size 1.2em
             font-weight 700
 
+            @media screen and (max-width: 640px)
+                font-size 1em
+                line-height 1.5em
+                text-transform uppercase
+
         p
             margin 0.85em 0 2em 0
             font-size 1.1em
             line-height 1.7em
+
+            @media screen and (max-width: 640px)
+                font-size 1em
 
         li
             margin-left 4em
@@ -203,12 +267,19 @@ strong
                 line-height 2.4em
                 text-align center
 
+                @media screen and (max-width: 640px)
+                    display none
+
+            @media screen and (max-width: 640px)
+                margin-left 0
+
+        @media screen and (max-width: 640px)
+            padding 0 1em
+
 
 // Projects
 .projects
 
-    .img-container
-        text-align center
 
     .section-title
         padding-bottom 0.8em
@@ -217,59 +288,129 @@ strong
     .project
         padding 0 1em
 
+        .img-container
+            background-color lighten($color_border_button, 65%)
+
+            img
+                margin 0 auto
+                display block
+                max-width 100%
+
         p
             color $color_text
             font-size 0.95em
             line-height 1.6em
 
-        .img-container
-            background-color lighten($color_border_button, 65%)
+        .button
+            margin 1em 0 1.5em 0
 
     .portfolio-links
+        padding 0.8em 0
+        border-top 1px solid $color_light_grey
+        border-bottom 1px solid $color_light_grey
         text-align center
+
+        @media screen and (max-width: 640px)
+            padding 0 1em
+
+// Quote
+.quote
+
+    blockquote
+        margin 2em 0
+        font-size 3em
+        line-height 1.4em
+        font-weight 300
+
+        p
+            margin 0
+
+        &:before
+            content ''
+            display block
+            margin 0 auto 0.7em auto
+            max-width 80px
+
+            border-bottom 1px solid lighten($color_text, 15%)
+
+            @media screen and (max-width: 640px)
+                border-bottom 1px solid $color_light_grey
+
+        &:after
+            content ''
+            display block
+            margin 0.7em auto 0em auto
+            max-width 80px
+
+            border-top 1px solid lighten($color_text, 15%)
+
+            @media screen and (max-width: 640px)
+                border-top 1px solid $color_light_grey
+
+        @media screen and (max-width: 640px)
+            font-size 1.4em
+            line-height 1.6em
+
+
+    cite
+        margin 0.5em 0 0 0
+        font-size 0.6em
+        font-style normal
+
+        @media screen and (max-width: 640px)
+            margin 1.2em 0 0 0
+            color lighten($color_text, 40%)
+
+            font-size 1em
+
 
 // Resume
 
 .my-resume
-    .section-title
-        padding-bottom 0.8em
-        border-bottom 1px solid $color_light_grey
 
-    .resume-unit
-        border-top 3px solid white
+    .resume-content
 
-        h5
-            margin 0 0 1em 0
-            font-size 1em
-
-        .experience-type
-        .experience-content
-        .experience-learned
-            padding 1em 2em
-
-        .experience-type
-            background-color $color_bg_terminal
-
-            .octicon
-                font-size 3em
-                color lighten($color_bg_terminal, 20%)
-
-            li
-                color $color_bg_grey
-
-                font-size 0.85em
-                line-height 1.8em
-                font-weight 600
-
-            .where
-                color lighten($color_bg_terminal, 35%)
-
-        .experience-content
+        .resume-unit
             background-color $color_bg_grey
+            border-top 3px solid white
 
-        .experience-learned
-            background-color $color_bg_lilac
+            h5
+                margin 0 0 1em 0
+                font-size 1em
 
+            .experience-type
+            .experience-content
+            .experience-learned
+                padding 1em 2em
+
+            .experience-type
+
+                li
+                    font-size 0.85em
+                    line-height 1.8em
+                    font-weight 600
+
+                .octicon
+                    font-size 3em
+                    color $color_text
+
+                .what
+                    margin 0.75em 0 0 0
+
+                .where
+                    color lighten($color_text, 40%)
+
+            .experience-content
+            .experience-learned
+
+                h5
+                p
+                    color $color_text
+                    font-size 0.9em
+                    line-height 1.6em
+
+            &:nth-of-type(2n)
+                background-color $color_bg_lilac
 
 
 // Thanks & Contacts
@@ -296,6 +437,23 @@ strong
     background-color $color_bg_terminal
 
     p
-        font-size 1.2em
-        padding 8em 0
+        margin 0
+        padding 9em 0
+
         color white
+
+        font-size 1.2em
+        line-height 1em
+        font-weight 700
+
+        .repo
+            color $color_terminal_01
+
+        .git
+            color $color_terminal_02
+
+        .branch
+            color $color_terminal_03
+
+        @media screen and (max-width: 640px)
+            font-size 0.85em
