@@ -95,11 +95,17 @@ strong {
   background: #f5f6e0;
 /* Old browsers */
   background: -moz-linear-gradient(top, #f5f6e0 0%, #5d77d7 100%);
+/* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f6e0), color-stop(100%, #5d77d7));
+/* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #f5f6e0 0%, #5d77d7 100%);
+/* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(top, #f5f6e0 0%, #5d77d7 100%);
+/* Opera 11.10+ */
   background: -ms-linear-gradient(top, #f5f6e0 0%, #5d77d7 100%);
+/* IE10+ */
   background: linear-gradient(to bottom, #f5f6e0 0%, #5d77d7 100%);
+/* W3C */
 }
 .octocat-banner .octicon-octoface {
   margin: 0.2em 0 0 0;
@@ -272,6 +278,7 @@ strong {
 }
 .projects .portfolio-links {
   font-size: 0.9em;
+  line-height: 1.4em;
   padding: 1.4em 0;
   border-top: 1px solid #e2e2e2;
   border-bottom: 1px solid #e2e2e2;
@@ -279,7 +286,7 @@ strong {
 }
 @media screen and (max-width: 640px) {
   .projects .portfolio-links {
-    padding: 0 1em;
+    line-height: 1.6em;
   }
 }
 .quote blockquote {
